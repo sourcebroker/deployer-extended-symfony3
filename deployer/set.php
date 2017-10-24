@@ -18,7 +18,6 @@ set('console_options', function () {
     return get('symfony_env') !== 'prod' ? $options : sprintf('%s --no-debug', $options);
 });
 set('assets', ['web/css', 'web/images', 'web/js']);
-set('dump_assets', false);
 set('env', function () {
     return [
         'SYMFONY_ENV' => get('symfony_env')
