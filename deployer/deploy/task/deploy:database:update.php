@@ -8,7 +8,7 @@ task('deploy:database:update', function () {
             run('{{bin/php}} {{bin/console}} doctrine:migrations:migrate {{console_options}} --allow-no-migration');
             break;
         case 'schema_update':
-        default:
             run('{{bin/php}} {{bin/console}} doctrine:schema:update {{console_options}} --force');
+            break;
     }
 })->desc('Update database');
