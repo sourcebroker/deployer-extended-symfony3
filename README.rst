@@ -1,6 +1,4 @@
 
-DO NOT USE IT YET - ITS TESTING VERSION
-
 deployer-extended-symfony3
 ==========================
 |
@@ -65,7 +63,7 @@ Database synchronization is done with `sourcebroker/deployer-extended-database`.
 The command for synchronizing database from live media to local instance is:
 ::
 
-   dep db:pull live
+   dep db:pull [instance]
 
 
 
@@ -73,12 +71,11 @@ Synchronizing media
 -------------------
 
 Media synchronization is done with `sourcebroker/deployer-extended-media`.
-Folders which are synchronized are ``web/media``.
 
 The command for synchronizing local media folders with live media folders is:
 ::
 
-   dep media:pull live
+   dep media:pull [instance]
 
 
 .. _sourcebroker/deployer-extended: https://github.com/sourcebroker/deployer-extended
