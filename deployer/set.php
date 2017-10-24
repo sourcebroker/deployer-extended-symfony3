@@ -41,6 +41,8 @@ set('media',
             '+ /web/',
             '+ /web/media/',
             '+ /web/media/**',
+            '+ /web/uploads/',
+            '+ /web/uploads/**',
             '- *'
         ]
     ]);
