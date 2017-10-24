@@ -54,6 +54,16 @@ set('db_defaults', [
 ]);
 
 // Look https://github.com/sourcebroker/deployer-extended-database for docs
+set('default_stage', function () {
+    return (new \SourceBroker\DeployerExtendedSymfony3\Drivers\Symfony3Driver)->getInstanceName();
+});
+
+// Look https://github.com/sourcebroker/deployer-extended-database for docs
+set('db_instance', function () {
+    return (new \SourceBroker\DeployerExtendedSymfony3\Drivers\Symfony3Driver)->getInstanceName();
+});
+
+// Look https://github.com/sourcebroker/deployer-extended-database for docs
 set('db_databases',
     [
         'database_default' => [
