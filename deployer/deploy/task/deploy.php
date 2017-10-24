@@ -38,6 +38,9 @@ task('deploy', [
     'deploy:vendors',
 
     // Special for symfony3
+    'deploy:database:update',
+
+    // Special for symfony3
     'deploy:assets:install',
 
     // Special for symfony3
