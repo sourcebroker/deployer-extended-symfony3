@@ -18,7 +18,7 @@ class Symfony3Driver
     public function getDatabaseConfig($absolutePathWithConfig = null)
     {
         if (null == $absolutePathWithConfig) {
-            $absolutePathWithConfig = __DIR__ . '/app/config/parameters.yml';
+            $absolutePathWithConfig = __DIR__ . '/../../../../../app/config/parameters.yml';
         }
         if (file_exists($absolutePathWithConfig)) {
             if (!class_exists(\Symfony\Component\Yaml\Yaml::class)) {
