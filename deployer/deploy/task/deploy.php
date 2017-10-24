@@ -22,9 +22,6 @@ task('deploy', [
     // Standard deployer deploy:update_code
     'deploy:update_code',
 
-    // Standard deployer deploy:clear_paths
-    'deploy:clear_paths',
-
     // Special for symfony3
     'deploy:create_cache_dir',
 
@@ -58,6 +55,9 @@ task('deploy', [
 
     // Standard deployer deploy:writable
     'deploy:writable',
+
+    // Standard deployer deploy:clear_paths
+    'deploy:clear_paths',
 
     // Standard deployers symlink (symlink release/x/ to current/)
     'deploy:symlink',
