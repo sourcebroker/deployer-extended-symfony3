@@ -60,7 +60,7 @@ task('deploy', [
 
     // Clear php cli cache.
     // Read more on https://github.com/sourcebroker/deployer-extended#php-clear-cache-cli
-    'php:clear_cache_cli',
+    'cache:clear_php_cli',
 
     // Standard deployer deploy:writable
     'deploy:writable',
