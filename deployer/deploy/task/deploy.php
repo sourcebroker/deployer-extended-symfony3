@@ -4,11 +4,20 @@ namespace Deployer;
 
 task('deploy', [
 
+    // Standard deployer deploy:info
+    'deploy:info',
+
     // Read more on https://github.com/sourcebroker/deployer-extended#deploy-check-lock
     'deploy:check_lock',
 
     // Read more on https://github.com/sourcebroker/deployer-extended#deploy-check-composer-install
     'deploy:check_composer_install',
+
+    // Read more on https://github.com/sourcebroker/deployer-extended#deploy-check-branch-local
+    'deploy:check_branch_local',
+
+    // Read more on https://github.com/sourcebroker/deployer-extended#deploy-check-branch
+    'deploy:check_branch',
 
     // Standard deployer deploy:prepare
     'deploy:prepare',
@@ -68,7 +77,12 @@ task('deploy', [
     // Standard deployer cleanup.
     'cleanup',
 
+    // Read more on https://github.com/sourcebroker/deployer-extended#deploy-extend-log
+    'deploy:extend_log',
+
+    // Standard deployer success.
+    'success',
+
 ])->desc('Deploy your Symfony3 project');
 
-after('deploy', 'success');
-
+after('deploy:failed', 'deploy:unlock');
